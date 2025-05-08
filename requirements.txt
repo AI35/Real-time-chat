@@ -1,0 +1,17 @@
+# Django and related packages
+Django>=5.2.1,<5.3
+channels>=4.0.0,<4.1.0
+daphne>=4.0.0,<4.1.0
+
+# WebSocket support
+channels-redis>=4.1.0,<4.2.0
+
+# For production deployment
+whitenoise>=6.5.0,<6.6.0
+
+# Security
+django-cors-headers>=4.3.0,<4.4.0
+
+# Development tools
+pytest>=7.4.0,<7.5.0
+pytest-django>=4.5.2,<4.6.0
