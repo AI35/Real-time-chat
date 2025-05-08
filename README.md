@@ -23,7 +23,7 @@ A real-time chat application built with Django and Channels, allowing users to c
 ## Installation
 1. Clone the repository
 ```bash
-git clone github.com.com/Ai35/Real-time-chat.git
+git clone github.com/Ai35/Real-time-chat.git
 ```
 2. Create a virtual environment and activate it
 ```bash
