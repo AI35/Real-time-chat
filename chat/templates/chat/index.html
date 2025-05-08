@@ -1,0 +1,27 @@
+{% extends 'chat/base.html' %}
+
+{% block title %}Chat Rooms{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+    <h2>Available Chat Rooms</h2>
+    
+    {% if user.is_staff %}
+    <div class="admin-controls">
+        <a href="{% url 'chat:create_room' %}" class="create-room-btn">Create New Room</a>
+    </div>
+    {% endif %}
+    
+    {% if rooms %}
+        <ul class="room-list">
+            {% for room in rooms %}
+                <li>
+                    <a href="{% url 'chat:room' room.slug %}">{{ room.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No chat rooms available.</p>
+    {% endif %}
+</div>
+{% endblock %}

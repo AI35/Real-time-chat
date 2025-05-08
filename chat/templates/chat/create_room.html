@@ -1,0 +1,18 @@
+{% extends 'chat/base.html' %}
+
+{% block title %}Create New Chat Room{% endblock %}
+
+{% block header %}Create New Chat Room{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+    <form method="post" class="room-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">Room Name:</label>
+            {{ form.name }}
+        </div>
+        <button type="submit" class="send-button">Create Room</button>
+    </form>
+</div>
+{% endblock %}
