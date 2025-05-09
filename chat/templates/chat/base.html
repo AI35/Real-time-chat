@@ -175,7 +175,8 @@
                     Hello, {{ user.username }}! 
                     <a href="{% url 'chat:logout' %}">Logout</a>
                 {% else %}
-                    <a href="{% url 'login' %}">Login</a>
+                    <a href="{% url 'login' %}">Login</a> | 
+                    <a href="{% url 'chat:signup' %}">Sign Up</a>
                 {% endif %}
             </div>
         </div>

@@ -143,3 +143,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Authentication settings
 LOGIN_REDIRECT_URL = 'chat:index'  # Redirect to home page after login
 LOGOUT_REDIRECT_URL = 'chat:index'  # Redirect to home page after logout
+
+
+# Authentication backends
+AUTHENTICATION_BACKENDS = [
+    'chat.backends.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
